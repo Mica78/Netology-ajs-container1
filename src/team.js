@@ -4,10 +4,10 @@ export default class Team {
   }
 
   add(newmember) {
-    if (!this.members.has(newmember)) {
-      this.members.add(newmember);
-    } else {
+    if (this.members.has(newmember)) {
       throw new Error('This member is already added');
+    } else {
+      this.members.add(newmember);
     }
   }
 
